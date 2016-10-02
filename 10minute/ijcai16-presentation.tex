@@ -1,0 +1,86 @@
+\documentclass{beamer}
+\usefonttheme{professionalfonts}
+\usepackage{hyperref}
+%\usefonttheme{serif}
+\usepackage{times}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{calc}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\Plus}{\mathord{\begin{tikzpicture}[baseline=0ex, line width=3, scale=0.25]
+\draw (1,0) -- (1,2);
+\draw (0,1) -- (2,1);
+\end{tikzpicture}}}
+
+\newcommand{\PlusSmall}{\mathord{\begin{tikzpicture}[baseline=0ex, line width=2, scale=0.10]
+\draw (1,0) -- (1,2);
+\draw (0,1) -- (2,1);
+\end{tikzpicture}}}
+
+\newcommand{\Minus}{\mathord{\begin{tikzpicture}[baseline=0ex, line width=3, scale=0.25]
+\draw (0,1) -- (2,1);
+\end{tikzpicture}}}
+
+\newcommand{\MinusSmall}{\mathord{\begin{tikzpicture}[baseline=0ex, line width=2, scale=0.10]
+\draw (0,1) -- (2,1);
+\end{tikzpicture}}}
+
+\tikzset{weird fill/.style={append after command={
+   \pgfextra
+        \draw[sharp corners, fill=#1]% 
+    (\tikzlastnode.west)% 
+    [rounded corners=3pt] |- (\tikzlastnode.north)% 
+    [rounded corners=1pt] -| (\tikzlastnode.east)% 
+    [rounded corners=1pt] |- (\tikzlastnode.south)% 
+    [rounded corners=3pt] -| (\tikzlastnode.west);
+   \endpgfextra}}}
+
+
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+
+\title{Real-Time Web Scale Event Summarization Using Sequential Decision 
+    Making}
+    \author{\textbf{Chris Kedzie}, Fernando Diaz, and Kathleen McKeown\\
+    ~\\
+    \url{kedzie@cs.columbia.edu}\\
+    Columbia University and Microsoft Research}
+\date{IJCAI-16 July 9th, 2016}
+\begin{document}
+\maketitle
+
+\input{example}
+\input{batch}
+\input{online}
+\input{nuggets}
+\input{lolssec1}
+%%\input{lolssec2}
+\begin{frame}{Real-Time Web Scale Event Summarization Using Sequential 
+    Decision Making}
+
+\Large Come to the poster to learn...
+
+~\\
+
+\begin{itemize}
+        \Large
+   \item training and data details
+   \item model features
+   \item evaluation method
+\end{itemize}
+
+~\\
+
+
+contact:\\ \url{www.cs.columbia.edu/~kedzie}\\
+\url{kedzie@cs.columbia.edu}
+
+\end{frame}
+
+
+
+%HERENOW
+
+
+\end{document}

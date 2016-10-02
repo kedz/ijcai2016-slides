@@ -1,0 +1,282 @@
+\begin{frame}
+\begin{figure}[h]
+ \centering
+ \begin{tikzpicture}
+   \tikzstyle{sent}=[align=left]
+   \tikzstyle{doc}=[rectangle,rounded corners,draw=black, very thick]
+
+
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (a) at (0,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (b) at (.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (c) at (1,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (d) at (1.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (e) at (2,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (f) at (2.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (g) at (3,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (h) at (3.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (i) at (4,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (j) at (4.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (k) at (5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (l) at (5.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (m) at (6,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (n) at (6.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (o) at (7,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (p) at (7.5,0) {};
+
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (q) at (.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (r) at (1.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (s) at (2.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (t) at (3.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (u) at (4.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (v) at (5.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (w) at (6.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (x) at (7.25,.5) {};
+
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (y) at (.75,1) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (z) at (2.75,1) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (1) at (4.75,1) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (2) at (6.75,1) {};
+
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (3) at (1.75,1.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (4) at (5.75,1.5) {};
+
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (5) at (3.75,2.25) {};
+
+%\node[] at ($(x) + (.75,0)$) [] {\footnotesize Sent. 4};
+%\node[] at ($(x) + (.75,.5)$) [] {\footnotesize Sent. 3};
+%\node[] at ($(x) + (.75,1)$) [] {\footnotesize Sent. 2};
+%\node[] at ($(x) + (.75,1.75)$) [] {\footnotesize Sent. 1};
+
+\visible<1>{
+\begin{pgflowlevelscope}{\pgftransformscale{0.25}}
+\draw [decorate,decoration={brace,amplitude=16pt,mirror,raise=4pt,},
+       line width=.1cm,yshift=0pt]
+($(31,-.5)$) -- ($(31,6)+(0,0)$) node [black,midway,xshift=0.8cm] {};
+\end{pgflowlevelscope}
+\node[] at ($(x) + (1.5,.2)$) [align=center] 
+    {\footnotesize Roll-out: $\hat{\pi}$};
+}
+\visible<2>{
+\begin{pgflowlevelscope}{\pgftransformscale{0.25}}
+\draw [decorate,decoration={brace,amplitude=16pt,mirror,raise=4pt,},
+       line width=.1cm,yshift=0pt]
+($(31,-.5)$) -- ($(31,4.25)+(0,0)$) node [black,midway,xshift=0.8cm] {};
+\end{pgflowlevelscope}
+\node[] at ($(x) + (1.6,0)$) [align=center] 
+    {\footnotesize Roll-out: $\pi^*$};
+\begin{pgflowlevelscope}{\pgftransformscale{0.25}}
+\draw [decorate,decoration={brace,amplitude=16pt,mirror,raise=4pt,},
+       line width=.1cm,yshift=0pt]
+($(31,6)$) -- ($(31,9.5)+(0,0)$) node [black,midway,xshift=0.8cm] {};
+\end{pgflowlevelscope}
+\node[] at ($(x) + (1.6,1.45)$) [align=center] 
+    {\footnotesize Roll-in: $\hat{\pi}$};
+}
+
+\visible<3>{
+\begin{pgflowlevelscope}{\pgftransformscale{0.25}}
+\draw [decorate,decoration={brace,amplitude=16pt,mirror,raise=4pt,},
+       line width=.1cm,yshift=0pt]
+($(31,-.5)$) -- ($(31,2.2)+(0,0)$) node [black,midway,xshift=0.8cm] {};
+\end{pgflowlevelscope}
+\node[] at ($(x) + (1.6,-.25)$) [align=center] 
+    {\footnotesize Roll-out: $\hat{\pi}$};
+\begin{pgflowlevelscope}{\pgftransformscale{0.25}}
+\draw [decorate,decoration={brace,amplitude=16pt,mirror,raise=4pt,},
+       line width=.1cm,yshift=0pt]
+($(31,3.75)$) -- ($(31,9.5)+(0,0)$) node [black,midway,xshift=0.8cm] {};
+\end{pgflowlevelscope}
+\node[] at ($(x) + (1.6,1.15)$) [align=center] 
+    {\footnotesize Roll-in: $\hat{\pi}$};
+}
+
+\visible<4>{
+\begin{pgflowlevelscope}{\pgftransformscale{0.25}}
+\draw [decorate,decoration={brace,amplitude=16pt,mirror,raise=4pt,},
+       line width=.1cm,yshift=0pt]
+($(31,2)$) -- ($(31,9.5)+(0,0)$) node [black,midway,xshift=0.8cm] {};
+\end{pgflowlevelscope}
+\node[] at ($(x) + (1.6,1)$) [align=center] 
+    {\footnotesize Roll-in: $\hat{\pi}$};
+}
+
+%\begin{pgflowlevelscope}{\pgftransformscale{0.25}}
+%\draw [decorate,decoration={brace,amplitude=16pt,mirror,raise=4pt,},
+%       line width=.1cm,yshift=0pt]
+%($(31,-.5)$) -- ($(31,2.5)+(0,0)$) node [black,midway,xshift=0.8cm] {};
+%\end{pgflowlevelscope}
+\draw[->] (5) -- (3); 
+\draw[->] (5) -- (4);
+
+
+\draw[->] (3) -- (y);
+\draw[->] (3) -- (z);
+
+\draw[->] (4) -- (1);
+\draw[->] (4) -- (2);
+
+
+\draw[->] (y) -- (q);
+\draw[->] (y) -- (r);
+
+\draw[->] (z) -- (s);
+\draw[->] (z) -- (t);
+
+\draw[->] (1) -- (u);
+\draw[->] (1) -- (v);
+
+\draw[->] (2) -- (w);
+\draw[->] (2) -- (x);
+
+
+
+
+\draw[->] (q) -- (a);
+\draw[->] (q) -- (b);
+
+\draw[->] (r) -- (c);
+\draw[->] (r) -- (d);
+
+\draw[->] (s) -- (e);
+\draw[->] (s) -- (f);
+
+\draw[->] (t) -- (g);
+\draw[->] (t) -- (h);
+
+\draw[->] (u) -- (i);
+\draw[->] (u) -- (j);
+
+\draw[->] (v) -- (k);
+\draw[->] (v) -- (l);
+
+\draw[->] (w) -- (m);
+\draw[->] (w) -- (n);
+
+\draw[->] (x) -- (o);
+\draw[->] (x) -- (p);
+
+
+\visible<2>{
+
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (4) {}; 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (5) -- (4); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (1) -- (u); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (u) -- (i); 
+
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (4) -- (2); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (4) -- (1); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (2) -- (w); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (w) -- (m); 
+
+  \node at ($(a)+(0,-.75)$) [] {$Cost$:};
+  \draw[-] ($(i)+(-.5,-1)$) -- ($(i)+(.5,-1)$) 
+   node[midway,rectangle,text height=.25cm,fill=red!40,yshift=.26cm] (xx) {};
+  \draw[-] ($(m)+(-.5,-1)$) -- ($(m)+(.5,-1)$) 
+   node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.21cm] (xx) {};
+   \node at ($(i)+(-1.5,-1)$) [] {$c(s_1, select)$};
+   \node at ($(m)+(1.5,-1)$) [] {$c(s_1, skip)$};
+  
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (i) {}; 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (m) {}; 
+}   
+
+\visible<4>{
+
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (w) {}; 
+
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (5) -- (4); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (4) -- (2); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (2) -- (w); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (w) -- (m); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (w) -- (n); 
+
+  \node at ($(a)+(0,-.75)$) [] {$Cost$:};
+  \draw[-] ($(n)+(-.5,-1)$) -- ($(n)+(.5,-1)$) 
+   node[midway,rectangle,text height=.075cm,fill=red!40,yshift=.175cm] (xx) {};
+  \draw[-] ($(m)+(-.5,-1)$) -- ($(m)+(.5,-1)$) 
+   node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.215cm] (xx) {};
+   \node at ($(m)+(-1.5,-1)$) [] {$c(s_3, select)$};
+   \node at ($(n)+(1.5,-1)$) [] {$c(s_3, skip)$};
+  
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (m) {}; 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (n) {}; 
+}
+
+   \visible<1-4>{
+    \node (LP) at ($(i)+(0,-4.25)$) 
+   [align=center,rounded corners,fill=purple!20] 
+   {Learned Policy: \\
+       cost-sensitive 
+       classification model \\
+       $\displaystyle \hat{\pi}(s) = 
+       \argmin_{a \in \{select,skip\}} \hat{c}(s,a)$};
+
+  % {$\begin{array}{l} \phi(s_0) \\ \phi(s_1) \\ \phi(s_2) \end{array}$};
+   }
+   \visible<1-4>{
+       \node at ($(i)+(0,-2)$) 
+           [align=center,rounded corners,fill=purple!20] 
+       {Locally Optimal Learning to Search (LOLS) \\
+           Roll-in: $\hat{\pi}$\\
+       Roll-out: Randomly choose $\pi^*$ or $\hat{\pi}$}; 
+   }
+\visible<1>{
+
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (5) {}; 
+
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (5) -- (3); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (5) -- (4); 
+   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (3) -- (z); 
+   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (z) -- (t); 
+   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (t) -- (g); 
+
+
+
+\draw[-,color=purple,very thick,dashed,line width=0.1cm] (4) -- (2); 
+\draw[-,color=purple,very thick,dashed,line width=0.1cm] (2) -- (w); 
+\draw[-,color=purple,very thick,dashed,line width=0.1cm] (w) -- (n); 
+
+  \node at ($(a)+(0,-.75)$) [] {$Cost$:};
+  \draw[-] ($(g)+(-.5,-1)$) -- ($(g)+(.5,-1)$) 
+   node[midway,rectangle,text height=.01cm,fill=red!40,yshift=.14cm] (xx) {};
+  \draw[-] ($(n)+(-.5,-1)$) -- ($(n)+(.5,-1)$) 
+   node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.21cm] (xx) {};
+   \node at ($(g)+(-1.5,-1)$) [] {$c(s_0,select)$};
+   \node at ($(n)+(1.5,-1)$) [] {$c(s_0, skip)$};
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (g) {}; 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (n) {}; 
+   
+}
+\visible<3>{
+
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (2) {}; 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (5) -- (4); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (4) -- (2); 
+
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (2) -- (w); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (w) -- (n); 
+
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (2) -- (x); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (x) -- (p); 
+
+
+%   \draw[-,color=black,very thick,dashed,line width=0.1cm] (4) -- (1); 
+%   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (v) -- (k); 
+
+  \node at ($(a)+(0,-.75)$) [] {$Cost$:};
+  \draw[-] ($(p)+(-.5,-1)$) -- ($(p)+(.5,-1)$) 
+   node[midway,rectangle,text height=.25cm,fill=red!40,yshift=.25cm] (xx) {};
+
+
+  \draw[-] ($(n)+(-.5,-1)$) -- ($(n)+(.5,-1)$) 
+   node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.21cm] (xx) {};
+   \node at ($(n)+(-1.5,-1)$) [] {$c(s_2,select)$};
+   \node at ($(p)+(1.5,-1)$) [] {$c(s_2,skip)$};
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (p) {}; 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (n) {}; 
+   
+}
+
+   \end{tikzpicture}
+\end{figure}
+\end{frame}

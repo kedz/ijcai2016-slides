@@ -1,0 +1,589 @@
+\begin{frame}
+\begin{figure}[h]
+ \centering
+ \begin{tikzpicture}
+   \tikzstyle{sent}=[align=left]
+   \tikzstyle{doc}=[rectangle,rounded corners,draw=black, very thick]
+
+
+
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (a) at (0,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (b) at (.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (c) at (1,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (d) at (1.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (e) at (2,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (f) at (2.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (g) at (3,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (h) at (3.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (i) at (4,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (j) at (4.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (k) at (5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (l) at (5.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (m) at (6,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (n) at (6.5,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (o) at (7,0) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (p) at (7.5,0) {};
+
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (q) at (.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (r) at (1.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (s) at (2.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (t) at (3.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (u) at (4.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (v) at (5.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (w) at (6.25,.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (x) at (7.25,.5) {};
+
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (y) at (.75,1) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (z) at (2.75,1) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (1) at (4.75,1) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (2) at (6.75,1) {};
+
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (3) at (1.75,1.5) {};
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (4) at (5.75,1.5) {};
+
+\node[draw,circle,minimum size=.20cm,inner sep=0pt] (5) at (3.75,2.25) {};
+
+\node[] at ($(x) + (.75,0)$) [] {\footnotesize Sent. 4};
+\node[] at ($(x) + (.75,.5)$) [] {\footnotesize Sent. 3};
+\node[] at ($(x) + (.75,1)$) [] {\footnotesize Sent. 2};
+\node[] at ($(x) + (.75,1.75)$) [] {\footnotesize Sent. 1};
+
+
+
+\draw[->] (5) -- (3); 
+\draw[->] (5) -- (4);
+
+
+\draw[->] (3) -- (y);
+\draw[->] (3) -- (z);
+
+\draw[->] (4) -- (1);
+\draw[->] (4) -- (2);
+
+
+\draw[->] (y) -- (q);
+\draw[->] (y) -- (r);
+
+\draw[->] (z) -- (s);
+\draw[->] (z) -- (t);
+
+\draw[->] (1) -- (u);
+\draw[->] (1) -- (v);
+
+\draw[->] (2) -- (w);
+\draw[->] (2) -- (x);
+
+
+
+
+\draw[->] (q) -- (a);
+\draw[->] (q) -- (b);
+
+\draw[->] (r) -- (c);
+\draw[->] (r) -- (d);
+
+\draw[->] (s) -- (e);
+\draw[->] (s) -- (f);
+
+\draw[->] (t) -- (g);
+\draw[->] (t) -- (h);
+
+\draw[->] (u) -- (i);
+\draw[->] (u) -- (j);
+
+\draw[->] (v) -- (k);
+\draw[->] (v) -- (l);
+
+\draw[->] (w) -- (m);
+\draw[->] (w) -- (n);
+
+\draw[->] (x) -- (o);
+\draw[->] (x) -- (p);
+
+\visible<2>{
+\node at ($(5)!0.5!(3)$) [text=green]{$\PlusSmall$};
+\node at ($(5)!0.5!(4)$) [text=red]{$\MinusSmall$};
+\node at ($(3)!0.5!(y)$) [text=green]{$\PlusSmall$};
+\node at ($(3)!0.5!(z)$) [text=red]{$\MinusSmall$};
+\node at ($(4)!0.5!(1)$) [text=green]{$\PlusSmall$};
+\node at ($(4)!0.5!(2)$) [text=red]{$\MinusSmall$};
+\node at ($(y)!0.5!(q)$) [text=green]{$\PlusSmall$};
+\node at ($(y)!0.5!(r)$) [text=red]{$\MinusSmall$};
+\node at ($(z)!0.5!(s)$) [text=green]{$\PlusSmall$};
+\node at ($(z)!0.5!(t)$) [text=red]{$\MinusSmall$};
+\node at ($(1)!0.5!(u)$) [text=green]{$\PlusSmall$};
+\node at ($(1)!0.5!(v)$) [text=red]{$\MinusSmall$};
+\node at ($(2)!0.5!(w)$) [text=green]{$\PlusSmall$};
+\node at ($(2)!0.5!(x)$) [text=red]{$\MinusSmall$};
+\node at ($(q)!0.5!(a)$) [text=green]{$\PlusSmall$};
+\node at ($(q)!0.5!(b)$) [text=red]{$\MinusSmall$};
+\node at ($(r)!0.5!(c)$) [text=green]{$\PlusSmall$};
+\node at ($(r)!0.5!(d)$) [text=red]{$\MinusSmall$};
+\node at ($(s)!0.5!(e)$) [text=green]{$\PlusSmall$};
+\node at ($(s)!0.5!(f)$) [text=red]{$\MinusSmall$};
+\node at ($(t)!0.5!(g)$) [text=green]{$\PlusSmall$};
+\node at ($(t)!0.5!(h)$) [text=red]{$\MinusSmall$};
+\node at ($(u)!0.5!(i)$) [text=green]{$\PlusSmall$};
+\node at ($(u)!0.5!(j)$) [text=red]{$\MinusSmall$};
+\node at ($(v)!0.5!(k)$) [text=green]{$\PlusSmall$};
+\node at ($(v)!0.5!(l)$) [text=red]{$\MinusSmall$};
+\node at ($(w)!0.5!(m)$) [text=green]{$\PlusSmall$};
+\node at ($(w)!0.5!(n)$) [text=red]{$\MinusSmall$};
+\node at ($(x)!0.5!(o)$) [text=green]{$\PlusSmall$};
+\node at ($(x)!0.5!(p)$) [text=red]{$\MinusSmall$};
+};
+
+\visible<4-7>{
+\draw[-,color=orange,very thick,dashed,line width=0.1cm] (5) -- (3); 
+}
+\visible<5-7>{
+\draw[-,color=orange,very thick,dashed,line width=0.1cm] (3) -- (z); 
+}
+\visible<6-7>{
+\draw[-,color=orange,very thick,dashed,line width=0.1cm] (z) -- (s); 
+}
+\visible<7>{
+\draw[-,color=orange,very thick,dashed,line width=0.1cm] (s) -- (e); 
+}
+\visible<9-12>{
+\draw[-,color=orange,very thick,dashed,line width=0.1cm] (5) -- (3); 
+}
+\visible<10-12>{
+\draw[-,color=orange,very thick,dashed,line width=0.1cm] (3) -- (z); 
+}
+\visible<11-12>{
+\draw[-,color=orange,very thick,dashed,line width=0.1cm] (z) -- (s); 
+}
+\visible<12>{
+\draw[-,color=orange,very thick,dashed,line width=0.1cm] (s) -- (e); 
+}
+
+
+
+
+\visible<14-17>{
+\draw[-,color=purple,very thick,dashed,line width=0.1cm] (5) -- (4); 
+}
+\visible<15-17>{
+\draw[-,color=purple,very thick,dashed,line width=0.1cm] (4) -- (2); 
+}
+\visible<16-17>{
+\draw[-,color=purple,very thick,dashed,line width=0.1cm] (2) -- (w); 
+}
+\visible<17>{
+\draw[-,color=purple,very thick,dashed,line width=0.1cm] (w) -- (n); 
+}
+
+
+\visible<3>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (5) {}; 
+}
+\visible<4>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (3) {}; 
+}
+\visible<5>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (z) {}; 
+}
+\visible<6>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (s) {}; 
+}
+\visible<7>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (e) {}; 
+}
+\visible<8>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (5) {}; 
+}
+\visible<9>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (3) {}; 
+}
+\visible<10>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (z) {}; 
+}
+\visible<11>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (s) {}; 
+}
+\visible<12>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (e) {}; 
+}
+
+
+\visible<13>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (5) {}; 
+}
+\visible<14>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (4) {}; 
+}
+\visible<15>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (2) {}; 
+}
+\visible<16>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (w) {}; 
+}
+\visible<17>{
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (n) {}; 
+}
+
+
+%\visible<-4>{
+   \visible<4-7,9-17>{
+       \node[sent,left] at (5.5, -1) {\fontsize{7}{11}\selectfont 
+       {\large\{} ~~~~~~~~~~ ``explosions'', ~~~~~~~~~~ ``finish line 
+           Marathon'' 
+       {\large\}}}; 
+       \node at (.2,-1) [rectangle,fill=yellow,text=orange,rounded corners] 
+       {\fontsize{6}{8}\selectfont \textbf{A}};
+
+       \node at (2.4,-1) [rectangle,fill=yellow,text=blue,rounded corners] 
+       {\fontsize{6}{8}\selectfont \textbf{B}};
+   }
+   \visible<6-7,11-17>{
+       \node[sent,left] at (5.5, -1.5) 
+       {\fontsize{7}{11}\selectfont 
+       {\large\{} ~~~~~~~~~~ ``two bombs,'' ~~~~~~~~~~ ``finish line 
+           Marathon'' 
+           {\large\}}};
+       \node at (.2,-1.5) [rectangle,fill=yellow,text=red,rounded corners] 
+       {\fontsize{6}{8}\selectfont \textbf{C}};
+       
+       \node at (2.4,-1.5) [rectangle,fill=yellow,text=blue, rounded corners] 
+       {\fontsize{6}{8}\selectfont \textbf{B}};
+   }
+   \visible<7,12-17>{
+   \node[sent,left] at (5.5, -2) 
+   {\fontsize{7}{11}\selectfont {\large\{} ~~~~~~~~~~ ``Many injured''
+       {\large\}}};
+       \node at (3.1,-2) [rectangle,fill=yellow,text=green!50,
+                           rounded corners] 
+       {\fontsize{6}{8}\selectfont \textbf{D}};
+   }
+
+
+
+   \visible<3-17>{
+   \draw[-,thick,rounded corners] (-.5,-1) -- (-.5, -.65) -- (5.5, -.65)
+       -- (5.5, -2.45) -- (-.5, -2.45) -- (-.5,-1.);
+  \node (O) at (1.7,-2.55) [fill=orange!20,rounded corners] { Oracle Summary};
+   }
+   \visible<8-12>{
+       \node (ARRAY) at ($(O)+(6,-1.25)$) [align=center] 
+       {$\phi(s) \triangleq $ feature \\function of state $s$};
+       \node (ARRAY) at ($(O)+(0,-1.25)$) [] 
+   {\begin{minipage}{3cm} 
+           $X = \left[ \begin{array}{c} 
+                   \visible<9-12>{\phi(s_0)} \\ 
+                   \visible<10-12>{\phi(s_1)} \\ 
+                   \visible<11-12>{\phi(s_2)} \\ 
+                   \visible<12-12>{\phi(s_3)} \\ 
+   \end{array} \right]$ \end{minipage} };
+   \node (ARRAY2) at ($(ARRAY)+(3,0)$) [] 
+   {\begin{minipage}{3cm} 
+           $y = \left[ \begin{array}{c} 
+                   \visible<9-12>{select} \\ 
+                   \visible<10-12>{skip} \\ 
+                   \visible<11-12>{select} \\ 
+                   \visible<12-12>{select} \\ 
+   \end{array} \right]$ \end{minipage} };
+  % {$\begin{array}{l} \phi(s_0) \\ \phi(s_1) \\ \phi(s_2) \end{array}$};
+   }
+   \visible<8-17>{
+   \node at ($(O)+(6,1)$) [rounded corners,fill=purple!20,align=center] 
+       {Learned Policy: \\ Naive \\Classification \\ Model};
+   }
+
+
+   \visible<8-12,18-22>{
+       \node at ($(5)+(.5,0)$) [] {$s_0$};
+   }
+   \visible<19-22>{
+       \node at ($(4)+(.5,0)$) [] {$s_1$};
+   }
+   \visible<20-22>{
+       \node at ($(2)+(.5,0)$) [] {$s_2$};
+   }
+   \visible<21-22>{
+       \node at ($(w)+(-.5,0)$) [] {$s_3$};
+   }
+   \visible<9-12>{
+       \node at ($(3)+(-.5,.25)$) [] {$s_1$};
+   }
+   \visible<10-12>{
+       \node at ($(z)+(.5,.25)$) [] {$s_2$};
+   }
+   \visible<11-12>{
+       \node at ($(s)+(-.5,.25)$) [] {$s_3$};
+   }
+   \visible<16-17>{    
+   \node[sent,left] at (5.5, -3.5) 
+   {\fontsize{7}{11}\selectfont 
+   {\large\{} ~~~~~~~~~~ ``two bombs,'' ~~~~~~~~~~ ``finish line Marathon'' 
+       {\large\}}};
+   \node at (.2,-3.5) [rectangle,fill=yellow,text=red,rounded corners] 
+   {\fontsize{6}{8}\selectfont \textbf{C}};
+   
+   \node at (2.4,-3.5) [rectangle,fill=yellow,text=blue,rounded corners] 
+   {\fontsize{6}{8}\selectfont \textbf{B}};
+   }
+\visible<13-17>{
+   \draw[-,thick,rounded corners] (-.5,-3.5) -- (-.5, -3.15) -- (5.5, -3.15)
+       -- (5.5, -3.9) -- (-.5, -3.9) -- (-.5,-3.5);
+   \node at (1.7,-4.05) [fill=purple!20,rounded corners] { Predicted Summary};
+}
+
+\visible<18>{
+
+   %\node at ($(5)+(-3.2,.1)$) [rectangle,fill=orange!20,rounded corners] 
+   %        {\Large Oracle Rollout};
+
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (5) {}; 
+
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (5) -- (3); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (5) -- (4); 
+}
+\visible<18>{
+   \draw[-,color=orange,very thick,dashed,line width=0.1cm] (3) -- (z); 
+   \draw[-,color=orange,very thick,dashed,line width=0.1cm] (z) -- (s); 
+   \draw[-,color=orange,very thick,dashed,line width=0.1cm] (s) -- (e); 
+
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (4) -- (2); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (2) -- (w); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (w) -- (m); 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (e) {}; 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (m) {}; 
+}
+\visible<18>{
+  \node at ($(a)+(0,-.75)$) [] {$Cost$:};
+  \draw[-] ($(e)+(-.5,-1)$) -- ($(e)+(.5,-1)$) 
+   node[midway,rectangle,text height=.01cm,fill=red!40,yshift=.14cm] (xx) {};
+  \draw[-] ($(m)+(-.5,-1)$) -- ($(m)+(.5,-1)$) 
+   node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.21cm] (xx) {};
+   \node at ($(e)+(-.75,-1)$) [] {$c_1$};
+   \node at ($(m)+(-.75,-1)$) [] {$c_0$};
+}  
+
+\visible<19,24>{
+
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (4) {}; 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (5) -- (4); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (1) -- (u); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (u) -- (i); 
+
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (4) -- (2); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (4) -- (1); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (2) -- (w); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (w) -- (m); 
+
+  \node at ($(a)+(0,-.75)$) [] {$Cost$:};
+  \draw[-] ($(i)+(-.5,-1)$) -- ($(i)+(.5,-1)$) 
+   node[midway,rectangle,text height=.25cm,fill=red!40,yshift=.26cm] (xx) {};
+  \draw[-] ($(m)+(-.5,-1)$) -- ($(m)+(.5,-1)$) 
+   node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.21cm] (xx) {};
+   \node at ($(i)+(-.75,-1)$) [] {$c_1$};
+   \node at ($(m)+(-.75,-1)$) [] {$c_0$};
+  
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (i) {}; 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (m) {}; 
+}   
+
+\visible<20>{
+
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (2) {};
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (5) -- (4); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (4) -- (2); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (2) -- (w); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (2) -- (x); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (w) -- (m); 
+  \draw[-,color=orange,very thick,dashed,line width=0.1cm] (x) -- (o); 
+
+  \node at ($(a)+(0,-.75)$) [] {$Cost$:};
+  \draw[-] ($(o)+(-.5,-1)$) -- ($(o)+(.5,-1)$) 
+   node[midway,rectangle,text height=.25cm,fill=red!40,yshift=.26cm] (xx) {};
+  \draw[-] ($(m)+(-.5,-1)$) -- ($(m)+(.5,-1)$) 
+   node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.21cm] (xx) {};
+   \node at ($(m)+(-.75,-1)$) [] {$c_1$};
+   \node at ($(o)+(.75,-1)$) [] {$c_0$};
+  
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (m) {}; 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (o) {}; 
+}
+\visible<21-22,26>{
+
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (w) {}; 
+
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (5) -- (4); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (4) -- (2); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (2) -- (w); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (w) -- (m); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (w) -- (n); 
+
+  \node at ($(a)+(0,-.75)$) [] {$Cost$:};
+  \draw[-] ($(n)+(-.5,-1)$) -- ($(n)+(.5,-1)$) 
+   node[midway,rectangle,text height=.075cm,fill=red!40,yshift=.175cm] (xx) {};
+  \draw[-] ($(m)+(-.5,-1)$) -- ($(m)+(.5,-1)$) 
+   node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.215cm] (xx) {};
+   \node at ($(m)+(-.75,-1)$) [] {$c_1$};
+   \node at ($(n)+(.75,-1)$) [] {$c_0$};
+  
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (m) {}; 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (n) {}; 
+}
+
+   \visible<18-22>{
+       \node (ARRAY) at ($(e)+(-1,-2.2)$) [] 
+   {\begin{minipage}{3cm}\scriptsize
+           $X = \left[ \begin{array}{c} 
+                   \visible<18-22>{\phi(s_0)} \\ 
+                   \visible<19-22>{\phi(s_1)} \\ 
+                   \visible<20-22>{\phi(s_2)} \\ 
+                   \visible<21-22>{\phi(s_3)} \\ 
+   \end{array} \right]$ \end{minipage} };
+   \node (ARRAY2) at ($(ARRAY)+(3,0)$) [draw] 
+   {\begin{minipage}{3.75cm}\scriptsize
+           $y_{select} = \left[ \begin{array}{c} 
+                   \visible<18-22>{c(s_0,select)} \\ 
+                   \visible<19-22>{c(s_1, select)} \\ 
+                   \visible<20-22>{c(s_2, select)} \\ 
+                   \visible<21-22>{c(s_3, select)} \\ 
+   \end{array} \right]$ \end{minipage} };
+   \node (ARRAY3) at ($(ARRAY2)+(5,-.50)$) [draw] 
+   {\begin{minipage}{3.5cm}\scriptsize 
+           $y_{skip} = \left[ \begin{array}{c} 
+                   \visible<18-22>{c(s_0, skip)} \\ 
+                   \visible<19-22>{c(s_1, skip)} \\ 
+                   \visible<20-22>{c(s_2, skip)} \\ 
+                   \visible<21-22>{c(s_3, skip)} \\ 
+   \end{array} \right]$ \end{minipage} };
+  }
+   \visible<22>{
+   \node at ($(ARRAY2)+(-3,-1.6)$) [align=center] 
+   {$\hat{c_1}(s) = w_{a_1} \cdot \phi(s)$  \\
+    $\hat{c_0}(s) = w_{a_0} \cdot \phi(s)$};
+   }
+   \visible<22-26>{
+    \node (LP) at ($(ARRAY2)+(2.5,-2.1)$) 
+   [align=center,rounded corners,fill=purple!20] 
+   {Learned Policy: \\
+       cost-sensitive \\
+       classification model \\
+       $\hat{\pi}(s) = 
+       \arg\min_{a \in \{a_1,a_0\}} w_a \cdot \phi(s)$};
+
+  % {$\begin{array}{l} \phi(s_0) \\ \phi(s_1) \\ \phi(s_2) \end{array}$};
+   }
+   \visible<23-26>{
+       \node at ($(LP)+(-3,2)$) 
+           [align=center,rounded corners,fill=purple!20] 
+       {Locally Optimal Learning to Search (LOLS) \\
+           Roll-in: $\hat{\pi}$\\
+       Roll-out: Randomly choose $\pi^*$ or $\hat{\pi}$}; 
+   }
+\visible<23>{
+
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (5) {}; 
+
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (5) -- (3); 
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (5) -- (4); 
+   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (3) -- (z); 
+   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (z) -- (t); 
+   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (t) -- (g); 
+
+
+
+\draw[-,color=purple,very thick,dashed,line width=0.1cm] (4) -- (2); 
+\draw[-,color=purple,very thick,dashed,line width=0.1cm] (2) -- (w); 
+\draw[-,color=purple,very thick,dashed,line width=0.1cm] (w) -- (n); 
+
+  \node at ($(a)+(0,-.75)$) [] {$Cost$:};
+  \draw[-] ($(g)+(-.5,-1)$) -- ($(g)+(.5,-1)$) 
+   node[midway,rectangle,text height=.01cm,fill=red!40,yshift=.14cm] (xx) {};
+  \draw[-] ($(n)+(-.5,-1)$) -- ($(n)+(.5,-1)$) 
+   node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.21cm] (xx) {};
+   \node at ($(g)+(-.75,-1)$) [] {$c_1$};
+   \node at ($(n)+(.75,-1)$) [] {$c_0$};
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (g) {}; 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (n) {}; 
+   
+}
+%
+%\visible<21>{
+%
+%   \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (4) {}; 
+%   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (5) -- (4); 
+%
+%   \draw[-,color=black,very thick,dashed,line width=0.1cm] (4) -- (2); 
+%   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (2) -- (w); 
+%   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (w) -- (n); 
+%
+%
+%   \draw[-,color=black,very thick,dashed,line width=0.1cm] (4) -- (1); 
+%   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (1) -- (v); 
+%   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (v) -- (k); 
+%
+%   \node at ($(a)+(0,-.75)$) [] {$Loss$:};
+%   \draw[-] ($(k)+(-.5,-1)$) -- ($(k)+(.5,-1)$) 
+%    node[midway,rectangle,text height=.01cm,fill=red!40,yshift=.14cm] (xx) {};
+%    \node at ($(k)+(0,-.6)$) [rectangle,minimum size=.45cm,thick,fill=white] {};
+%
+%
+%   \draw[-] ($(n)+(-.5,-1)$) -- ($(n)+(.5,-1)$) 
+%    node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.21cm] (xx) {};
+%   \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (k) {}; 
+%   \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (n) {}; 
+%    
+%}
+%
+\visible<25>{
+
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (2) {}; 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (5) -- (4); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (4) -- (2); 
+
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (2) -- (w); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (w) -- (n); 
+
+  \draw[-,color=black,very thick,dashed,line width=0.1cm] (2) -- (x); 
+  \draw[-,color=purple,very thick,dashed,line width=0.1cm] (x) -- (p); 
+
+
+%   \draw[-,color=black,very thick,dashed,line width=0.1cm] (4) -- (1); 
+%   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (v) -- (k); 
+
+  \node at ($(a)+(0,-.75)$) [] {$Cost$:};
+  \draw[-] ($(p)+(-.5,-1)$) -- ($(p)+(.5,-1)$) 
+   node[midway,rectangle,text height=.25cm,fill=red!40,yshift=.25cm] (xx) {};
+
+
+  \draw[-] ($(n)+(-.5,-1)$) -- ($(n)+(.5,-1)$) 
+   node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.21cm] (xx) {};
+   \node at ($(n)+(-.75,-1)$) [] {$c_1$};
+   \node at ($(p)+(.75,-1)$) [] {$c_0$};
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (p) {}; 
+  \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (n) {}; 
+   
+}
+%
+%\visible<23>{
+%
+%   \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (w) {}; 
+%   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (5) -- (4); 
+%   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (4) -- (2); 
+%
+%   \draw[-,color=purple,very thick,dashed,line width=0.1cm] (2) -- (w); 
+%
+%   \draw[-,color=black,very thick,dashed,line width=0.1cm] (w) -- (m); 
+%   \draw[-,color=black,very thick,dashed,line width=0.1cm] (w) -- (n); 
+%
+%
+%   \node at ($(a)+(0,-.75)$) [] {$Loss$:};
+%   \draw[-] ($(m)+(-.5,-1)$) -- ($(m)+(.5,-1)$) 
+%    node[midway,rectangle,text height=.10cm,fill=red!40,yshift=.19cm] (xx) {};
+%
+%   \draw[-] ($(n)+(-.5,-1)$) -- ($(n)+(.5,-1)$) 
+%    node[midway,rectangle,text height=.15cm,fill=red!40,yshift=.21cm] (xx) {};
+%   \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (m) {}; 
+%   \node[draw,circle,minimum size=.45cm,inner sep=0pt,dashed,thick] at (n) {}; 
+%    
+%}
+
+   \end{tikzpicture}
+\end{figure}
+\end{frame}
